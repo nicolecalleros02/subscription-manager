@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0f;
+    margin: 0;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #0a0a0f; 
+    padding: 12px 20px;
+    border-radius: 40px;
+    margin: 20px auto 30px auto; 
+    max-width: 450px;
+}
+
+.nav-item {
+    color: #a6b3c4; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 4px;
+}
+
+.nav-item.active {
+    color: #7bafef;
+}
+
+.nav-icon {
+    font-size: 22px;
+}
+
+/* Summary */
+.summary-card {
+    background-color: #7bafef;
+    color: #0a0a0f;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.summary-amount {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.active-count {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Subscription List */
+.subscription-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscription-card {
+    background-color: #FFFFFF;
+    color: #0a0a0f;
+    border-radius: 12px;
+    padding: 15px;
+    
+    /* Creates grid to put name/date on the left & price on the right */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+        "name price"
+        "date price";
+    align-items: center;
+}
+
+.subscription-name {
+    grid-area: name;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.subscription-date {
+    grid-area: date;
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.subscription-price {
+    grid-area: price;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
