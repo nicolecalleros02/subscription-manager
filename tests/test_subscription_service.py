@@ -4,6 +4,7 @@ from subscription_validation import validate_subscription
 
 class TestSubscriptionValidation(unittest.TestCase):
 
+    # Test to check if all fields are valid
     def test_valid_subscription(self):
         subscription = {
             "name": "Netflix",
@@ -17,6 +18,8 @@ class TestSubscriptionValidation(unittest.TestCase):
 
         self.assertEqual(errors, {})
 
+
+    # Test to check if price is negative
     def test_negative_price(self):
         subscription = {
             "name": "Netflix",
@@ -33,6 +36,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Price cannot be negative."
         )
 
+
+    # Test to check if subscription name is missing
     def test_missing_subscription_name(self):
         subscription = {
             "name": "",
@@ -49,6 +54,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Subscription name is required."
         )
 
+
+    # Test to check if billing cycle is invalid
     def test_invalid_billing_cycle(self):
         subscription = {
             "name": "Netflix",
@@ -65,6 +72,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Please select a valid billing cycle."
         )
 
+
+    # Test to check if next billing date is invalid
     def test_invalid_billing_date(self):
         subscription = {
             "name": "Netflix",
@@ -81,6 +90,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Please enter a valid date in YYYY-MM-DD format."
         )
 
+
+    # Test to check if cancellation URL is invalid
     def test_invalid_cancellation_url(self):
         subscription = {
             "name": "Netflix",
@@ -98,6 +109,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Please enter a valid cancellation URL."
         )
 
+
+    # Test to check if category is missing
     def test_missing_category(self):
         subscription = {
             "name": "Netflix",
@@ -114,6 +127,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Subscription category is required."
         )
 
+
+    # Test to check if price is non-numeric
     def test_nonnumeric_price(self):
         subscription = {
             "name": "Netflix",
@@ -130,6 +145,8 @@ class TestSubscriptionValidation(unittest.TestCase):
             "Please enter a valid price."
         )
 
+
+    # Test to check if price is non-finite
     def test_nonfinite_prices(self):
         subscription = {
             "name": "Netflix",
