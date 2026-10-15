@@ -51,3 +51,6 @@ def validate_registration(full_name, username, email, password):
         errors["password"] = "Password is required."
 
     return errors
+from flask import Blueprint
+
+bp = Blueprint('auth', __name__)
