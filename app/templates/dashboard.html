@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <!-- Summary Card -->
+        <div class="summary-card">
+            <p class="summary-title">TOTAL MONTHLY DUE</p>
+
+            <!-- Total_due -->
+            <h1 class="summary-amount">${{ "%.2f"|format(total_due) }}</h1>
+            
+            <!-- Subscription_count -->
+            <p class="active-count">{{ subscription_count }} Active Subscriptions</p>
+        </div>
+
+    <!-- Subscription List -->
+    <div class="subscription-list">
+        {% for subscription in subscriptions %}
+            <div class="subscription-card">
+                <h2 class="subscription-name">{{ subscription.name }}</h2>
+                <p class="subscription-price">${{ "%.2f"|format(subscription.price) }}</p>
+                <p class="subscription-date">Next Billing Date: {{ subscription.next_billing_date | fmt_date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
