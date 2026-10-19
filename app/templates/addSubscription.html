@@ -1,56 +1,48 @@
 {% extends "base.html" %}
 
-<html>
-    <head>
-        <title>Subscription</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <script type="text/javascript" src="script.js"></script>
-    </head>
+{% block content %}
+<body class="addSubscription">
+    <!--Main Fields-->
+    <h2>Add Subscription</h2>
+    <div class="input-container">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name">
 
-    <!-- Add HTML markup elements for your web site below -->
-    <body>
-        <!--Main Fields-->
-        <h2>Add Subscription</h2>
-        <div class="input-container">
-            <label for="name">Name:</label>
-            <input id="name" type="text" name="name">
+        <label for="price">Price:</label>
+        <input id="price" type="text" name="price">
 
-            <label for="price">Price:</label>
-            <input id="price" type="text" name="price">
+        <label for="cycle">Billing Cycle:</label>
+        <input id="cycle" type="text" name="cycle">
 
-            <label for="cycle">Billing Cycle:</label>
-            <input id="cycle" type="text" name="cycle">
+        <label for="category">Category:</label>
+        <input id="category" type="text" name="category">
 
-            <label for="category">Category:</label>
-            <input id="category" type="text" name="category">
+        <label for="billDate">Next Billing Date:</label>
+        <input id="billDate" type="text" name="billDate">
 
-            <label for="billDate">Next Billing Date:</label>
-            <input id="billDate" type="text" name="billDate">
+        <label for="urlLink">Cacellation URL:</label>
+        <input id="urlLink" type="text" name="urlLink">
 
-            <label for="urlLink">Cacellation URL:</label>
-            <input id="urlLink" type="text" name="urlLink">
+        <label for="remind">Remind Renewal:</label>
+        <input id="remind" type="text" name="remind">
 
-            <label for="remind">Remind Renewal:</label>
-            <input id="remind" type="text" name="remind">
+        <button id="submit-button" type="submit" value="submit">Add Subscription</button>
+    </div>
+</body>
 
-            <button id="submit-button" type="submit" value="submit">Add Subscription</button>
+<!--Success Pop-Up-->
+<div id="success-modal">
+    <div class="modal-container">
+        <div class="modal-item">
+            <p id="modal-text">
+                PLACEHOLDER TEXT FOR TESTING
+            </p>
+            <button id="modal-button">Close</button>
         </div>
-    </body>
-
-    <!--Success Pop-Up-->
-    <div id="success-modal">
-        <div class="modal-container">
-            <div class="modal-item">
-                <p id="modal-text">
-                    PLACEHOLDER TEXT FOR TESTING
-                </p>
-                <button id="modal-button">Close</button>
-            </div>
-            <div class="modal-item">
-                <!--add picture later-->
-                <!--<img id="PaleH.jpg" src="./img/PaleH.jpg" width="120"/>-->
-            </div>
+        <div class="modal-item">
+            <!--add picture later-->
+            <!--<img id="PaleH.jpg" src="./img/PaleH.jpg" width="120"/>-->
         </div>
     </div>
-</html>
+</div>
+{% endblock %}

@@ -31,11 +31,12 @@ def create_app(test_config=None):
         db.init_db()
 
     # Plug in each team member's pages
-    from .routes import auth, dashboard, subscriptions
+    from .routes import auth, dashboard, subscriptions, addSubscription
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(dashboard.bp)
     app.register_blueprint(subscriptions.bp)
+    app.register_blueprint(addSubscription.bp)
 
     # HTML show dates like "Nov 05, 2026" instead of "2026-11-05"
     @app.template_filter("fmt_date")
