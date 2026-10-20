@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="subscriptions">
+        <!--Main Fields-->
+        <h2>Change Subscription</h2>
+        <nav class="nav-bar">
+            <a href="/addSubscription" class="nav-item">
+                <span class="nav-icon">➕</span>
+                Add Subscription
+            </a>
+            <a href="/updateSubscription" class="nav-item">
+                <span class="nav-icon">🔁</span>
+                Update Subscription
+            </a>
+            <a href="/deleteSubscription" class="nav-item">
+                <span class="nav-icon">➖</span>
+                Delete Subscription
+            </a>
+        </nav>
+</body>
+{% endblock %}

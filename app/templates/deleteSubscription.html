@@ -1,0 +1,30 @@
+{% extends "changeSubscription.html" %}
+
+{% block content %}
+<body class="deleteSubscription">
+    <!--Main Fields-->
+    <h2>Delete Subscription</h2>
+    <div class="subscription-card">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name">
+
+        <button id="submit-button" type="submit" value="submit">Delete Subscription</button>
+    </div>
+</body>
+
+<!--Success Pop-Up-->
+<div id="success-modal">
+    <div class="modal-container">
+        <div class="modal-item">
+            <p id="modal-text">
+                PLACEHOLDER TEXT FOR TESTING
+            </p>
+            <button id="modal-button">Close</button>
+        </div>
+        <div class="modal-item">
+            <!--add picture later-->
+            <!--<img id="PaleH.jpg" src="./img/PaleH.jpg" width="120"/>-->
+        </div>
+    </div>
+</div>
+{% endblock %}
