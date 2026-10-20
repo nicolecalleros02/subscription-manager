@@ -70,6 +70,21 @@ body {
 }
 
 /* Subscription List */
+.subsctiption-title-card{
+    background-color: #7bafef;
+    color: #7bafef;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.subscription-title{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 .subscription-list {
     display: flex;
     flex-direction: column;
@@ -109,14 +124,6 @@ body {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  padding-bottom: 50px;
 }
 
 #submit-button{
