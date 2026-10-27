@@ -4,7 +4,8 @@ from flask import (
     render_template,
     redirect,
     url_for,
-    flash
+    flash,
+    session
 )
 
 from app.models.subscription import (
@@ -14,7 +15,15 @@ from app.models.subscription import (
 )
 
 bp = Blueprint('addSubscription', __name__)
+
 @bp.route('/addSubscription')
 def tempAddSubscription():
-    user_id = 1 #temp
+
+    # Get the logged-in user's ID from the session
+    user_id = session.get("user_id")
+
+    # Redirect to login if the user is not authenticated
+    if user_id is None:
+        return redirect(url_for("auth.login"))
+
     return render_template('addSubscription.html')
